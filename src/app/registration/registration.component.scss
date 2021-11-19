@@ -1,0 +1,45 @@
+mat-card {
+  margin: 2em auto;
+  max-width: 600px;
+  text-align: center;
+  background-color: #e7e6fd;
+}
+
+input:-internal-autofill-selected {
+  background-image: none !important;
+  background-color: rgba(70, 90, 126, 0.4) !important;
+  color: -internal-light-dark(black, white) !important;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.left-column, .right-column {
+  float: left;
+  width: 50%;
+}
+
+.left-column {
+  padding-right: 8px;
+}
+
+.right-column {
+  padding-left: 8px;
+}
+
+@media only screen and (min-width: 414px) {
+  mat-form-field, button {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 413px) {
+  .left-column, .right-column, mat-form-field, button {
+    width: 100%;
+  }
+
+  .left-column, .right-column {
+    padding: 0px;
+  }
+}
