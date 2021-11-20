@@ -1,6 +1,11 @@
 <p>
   <mat-toolbar color="primary">
-    <span>Cadastro do Jogador</span>
+    <span>{{ 'header.title' | translate }}</span>
+    <span class="spacer"></span>
+    <span class="flag-icon flag-icon-{{flagcode}} flag-spacer"></span>
+    <select #langSelect (change)="translate.use(langSelect.value)">
+      <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang | uppercase }}</option>
+    </select>
   </mat-toolbar>
 </p>
 

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, ValidatorFn, ValidationErrors } from "@angular/forms";
+import { TranslateService } from '@ngx-translate/core';
 
 import { NotificationService } from 'src/app/services/notification.service';
 
@@ -15,7 +16,8 @@ export class RegistrationComponent {
 
   constructor(
     public formBuilder: FormBuilder,
-    private notifyService : NotificationService
+    private notifyService : NotificationService,
+    private translateService: TranslateService
   ) {
     this.registrationForm = this.formBuilder.group({
       name: ['', [
@@ -50,8 +52,7 @@ export class RegistrationComponent {
           this.controlValuesAreEqual('password', 'confirmPassword')
         ])
       ]],
-    }
-    );
+    });
    }
 
   public errorHandling = (control: string, error: string) => {
@@ -92,9 +93,10 @@ export class RegistrationComponent {
     }
   }
 
-  public submitForm(): void {
+  public async submitForm(): Promise<void> {
     if (this.registrationForm.valid) {
-      this.notifyService.showSuccess('você foi cadastrado com sucesso');
+      const translation = await this.translateService.get('form.messages.success').toPromise();
+      this.notifyService.showSuccess(translation);
       this.registrationForm.reset();
       for(var name in this.registrationForm.controls) {
         this.registrationForm?.get(name)?.setErrors(null);

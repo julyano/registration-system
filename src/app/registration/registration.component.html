@@ -1,53 +1,53 @@
 <div>
   <mat-card>
     <mat-card-header>
-      <mat-card-title>Formulário</mat-card-title>
+      <mat-card-title>{{ 'form.registration.header' | translate }}</mat-card-title>
     </mat-card-header>
 
     <form [formGroup]="registrationForm" (ngSubmit)="submitForm()" novalidate>
 
       <mat-form-field appearance="outline">
-        <mat-label>Nome Completo</mat-label>
-        <input matInput placeholder="Nome Completo" formControlName="name" maxlength="255">
+        <mat-label>{{ 'form.registration.name.label' | translate }}</mat-label>
+        <input matInput placeholder="{{ 'form.registration.name.placeholder' | translate }}" formControlName="name" maxlength="255">
         <mat-error *ngIf="errorHandling('name', 'required')">
-          Campo obrigatório
+          {{ 'form.messages.generic.error.required' | translate }}
         </mat-error>
         <mat-error *ngIf="errorHandling('name', 'minlength')">
-          Nome muito curto
+          {{ 'form.registration.name.messages.error.minlength' | translate }}
         </mat-error>
         <mat-error *ngIf="errorHandling('name', 'pattern')">
-          Nome inválido
+          {{ 'form.registration.name.messages.error.pattern' | translate }}
         </mat-error>
         <mat-error *ngIf="registrationForm?.get('name')?.getError('valuesNotAllowed')">
-          Nome de usuário não permitido
+          {{ 'form.registration.name.messages.error.custom.valuesNotAllowed' | translate }}
         </mat-error>
       </mat-form-field>
 
       <div class="left-column">
         <mat-form-field appearance="outline">
-          <mat-label>Nome de Usuário</mat-label>
-          <input matInput placeholder="Nome de Usuário" formControlName="username" maxlength="50">
+          <mat-label>{{ 'form.registration.username.label' | translate }}</mat-label>
+          <input matInput placeholder="{{ 'form.registration.username.placeholder' | translate }}" formControlName="username" maxlength="50">
           <mat-error *ngIf="errorHandling('username', 'required')">
-            Campo obrigatório
+            {{ 'form.messages.generic.error.required' | translate }}
           </mat-error>
           <mat-error *ngIf="errorHandling('username', 'minlength')">
-            Nome muito curto
+            {{ 'form.registration.username.messages.error.minlength' | translate }}
           </mat-error>
           <mat-error *ngIf="errorHandling('username', 'pattern')">
-            Nome inválido
+            {{ 'form.registration.username.messages.error.pattern' | translate }}
           </mat-error>
           <mat-error *ngIf="registrationForm?.get('username')?.getError('valuesNotAllowed')">
-            Nome de usuário não permitido
+            {{ 'form.registration.username.messages.error.custom.valuesNotAllowed' | translate }}
           </mat-error>
         </mat-form-field>
       </div>
       <div class="right-column">
         <mat-form-field appearance="outline">
-          <mat-label>Data de Nascimento</mat-label>
-          <input matInput readonly [matDatepicker]="picker" placeholder="Data de Nascimento" formControlName="datebirth"
+          <mat-label>{{ 'form.registration.dateOfBirth.label' | translate }}</mat-label>
+          <input matInput readonly [matDatepicker]="picker" placeholder="{{ 'form.registration.dateOfBirth.placeholder' | translate }}" formControlName="datebirth"
             (dateChange)="date($event)">
           <mat-error *ngIf="errorHandling('datebirth', 'required')">
-            Campo obrigatório
+            {{ 'form.messages.generic.error.required' | translate }}
           </mat-error>
           <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
           <mat-datepicker #picker></mat-datepicker>
@@ -55,44 +55,44 @@
       </div>
 
       <mat-form-field appearance="outline">
-        <mat-label>Email</mat-label>
-        <input matInput placeholder="Email" formControlName="email" maxlength="255">
+        <mat-label>{{ 'form.registration.email.label' | translate }}</mat-label>
+        <input matInput placeholder="{{ 'form.registration.email.placeholder' | translate }}" formControlName="email" maxlength="255">
         <mat-error *ngIf="errorHandling('email', 'required')">
-          Campo obrigatório
+          {{ 'form.messages.generic.error.required' | translate }}
         </mat-error>
         <mat-error *ngIf="errorHandling('email', 'email')">
-          Email inválido
+          {{ 'form.registration.email.messages.error.email' | translate }}
         </mat-error>
       </mat-form-field>
 
       <mat-form-field appearance="outline">
-        <mat-label>Senha</mat-label>
-        <input matInput type="password" placeholder="Senha" formControlName="password" [type]="hidePassword ? 'password' : 'text'" maxlength="255">
+        <mat-label>{{ 'form.registration.password.label' | translate }}</mat-label>
+        <input matInput type="password" placeholder="{{ 'form.registration.password.placeholder' | translate }}" formControlName="password" [type]="hidePassword ? 'password' : 'text'" maxlength="255">
         <mat-icon matSuffix (click)="hidePassword = !hidePassword">{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
         <mat-error *ngIf="errorHandling('password', 'required')">
-          Campo obrigatório
+          {{ 'form.messages.generic.error.required' | translate }}
         </mat-error>
         <mat-error *ngIf="errorHandling('password', 'minlength')">
-          Senha muito curta
+          {{ 'form.registration.password.messages.error.minlength' | translate }}
         </mat-error>
       </mat-form-field>
 
       <mat-form-field appearance="outline">
-        <mat-label>Confirmar Senha</mat-label>
-        <input matInput type="password" placeholder="Confirmar Senha" formControlName="confirmPassword" [type]="hideConfirmPassword ? 'password' : 'text'" maxlength="255">
+        <mat-label>{{ 'form.registration.confirmPassword.label' | translate }}</mat-label>
+        <input matInput type="password" placeholder="{{ 'form.registration.confirmPassword.placeholder' | translate }}" formControlName="confirmPassword" [type]="hideConfirmPassword ? 'password' : 'text'" maxlength="255">
         <mat-icon matSuffix (click)="hideConfirmPassword = !hideConfirmPassword">{{hideConfirmPassword ? 'visibility_off' : 'visibility'}}</mat-icon>
         <mat-error *ngIf="errorHandling('confirmPassword', 'required')">
-          Campo obrigatório
-        </mat-error>
-        <mat-error *ngIf="registrationForm?.get('confirmPassword')?.getError('valuesDoNotMatch')">
-          Senhas estão diferentes
+          {{ 'form.messages.generic.error.required' | translate }}
         </mat-error>
         <mat-error *ngIf="!registrationForm?.get('confirmPassword')?.getError('valuesDoNotMatch') && errorHandling('confirmPassword', 'minlength')">
-          Senha muito curta
+          {{ 'form.registration.confirmPassword.messages.error.minlength' | translate }}
+        </mat-error>
+        <mat-error *ngIf="registrationForm?.get('confirmPassword')?.getError('valuesDoNotMatch')">
+          {{ 'form.registration.confirmPassword.messages.error.custom.valuesDoNotMatch' | translate }}
         </mat-error>
       </mat-form-field>
 
-      <button mat-flat-button color="primary" disabled={{registrationForm.invalid}}>se inscrever</button>
+      <button mat-flat-button color="primary" disabled={{registrationForm.invalid}}>{{ 'form.registration.button.label' | translate }}</button>
 
     </form>
   </mat-card>
