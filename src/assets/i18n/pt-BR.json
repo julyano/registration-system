@@ -1,0 +1,78 @@
+{
+  "header": {
+    "title": "Cadastro de Jogador"
+  },
+  "form": {
+    "registration": {
+      "header": "Formulário",
+      "name": {
+        "label": "Nome Completo",
+        "placeholder": "Nome Completo",
+        "messages": {
+          "error": {
+            "minlength": "Nome muito curto",
+            "pattern": "Nome inválido",
+            "custom": {
+              "valuesNotAllowed": "Nome de usuário não permitido"
+            }
+          }
+        }
+      },
+      "username": {
+        "label": "Nome de Usuário",
+        "placeholder": "Nome de Usuário",
+        "messages": {
+          "error": {
+            "minlength": "Nome muito curto",
+            "pattern": "Nome inválido"
+          }
+        }
+      },
+      "dateOfBirth": {
+        "label": "Data de Nascimento",
+        "placeholder": "Data de Nascimento"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "Email",
+        "messages": {
+          "error": {
+            "email": "Email inválido"
+          }
+        }
+      },
+      "password": {
+        "label": "Senha",
+        "placeholder": "Senha",
+        "messages": {
+          "error": {
+            "minlength": "Senha muito curta"
+          }
+        }
+      },
+      "confirmPassword": {
+        "label": "Confirmar Senha",
+        "placeholder": "Confirmar Senha",
+        "messages": {
+          "error": {
+            "minlength": "Senha muito curta",
+            "custom": {
+              "valuesDoNotMatch": "Senhas estão diferentes"
+            }
+          }
+        }
+      },
+      "button": {
+        "label": "se inscrever"
+      }
+    },
+    "messages": {
+      "generic": {
+        "error": {
+          "required": "Campo obrigatório"
+        }
+      },
+      "success": "você foi cadastrado com sucesso"
+    }
+  }
+}

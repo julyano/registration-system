@@ -1,0 +1,81 @@
+{
+  "header": {
+    "title": "Player Registration"
+  },
+  "form": {
+    "registration": {
+      "header": "Form",
+      "name": {
+        "label": "Full Name",
+        "placeholder": "Full Name",
+        "messages": {
+          "error": {
+            "minlength": "Very short name",
+            "pattern": "Invalid name",
+            "custom": {
+              "valuesNotAllowed": "User name not allowed"
+            }
+          }
+        }
+      },
+      "username": {
+        "label": "User name",
+        "placeholder": "User name",
+        "messages": {
+          "error": {
+            "minlength": "Very short name",
+            "pattern": "Invalid name",
+            "custom": {
+              "valuesNotAllowed": "User name not allowed"
+            }
+          }
+        }
+      },
+      "dateOfBirth": {
+        "label": "Date of Birth",
+        "placeholder": "Date of Birth"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "Email",
+        "messages": {
+          "error": {
+            "email": "Invalid email"
+          }
+        }
+      },
+      "password": {
+        "label": "Password",
+        "placeholder": "Password",
+        "messages": {
+          "error": {
+            "minlength": "Password too short"
+          }
+        }
+      },
+      "confirmPassword": {
+        "label": "Confirm Password",
+        "placeholder": "Confirm Password",
+        "messages": {
+          "error": {
+            "minlength": "Password too short",
+            "custom": {
+              "valuesDoNotMatch": "Passwords are different"
+            }
+          }
+        }
+      },
+      "button": {
+        "label": "subscribe"
+      }
+    },
+    "messages": {
+      "generic": {
+        "error": {
+          "required": "Required field"
+        }
+      },
+      "success": "you were successfully registered"
+    }
+  }
+}

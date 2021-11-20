@@ -1,0 +1,26 @@
+select {
+  min-width: 70px;
+  width: 70px;
+  min-height: 30px;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  letter-spacing: normal;
+  color:white;
+  border-color: #3f51b5 !important;
+  font-weight: 600;
+  background-color: #3f51b5;
+  cursor: pointer;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.flag-spacer {
+  margin: 4px;
+}
+
+
+
+
+
+
