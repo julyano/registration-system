@@ -24,7 +24,10 @@
         "messages": {
           "error": {
             "minlength": "Nome muito curto",
-            "pattern": "Nome inválido"
+            "pattern": "Nome inválido",
+            "custom": {
+              "valuesNotAllowed": "Nome de usuario não permitido"
+            }
           }
         }
       },
