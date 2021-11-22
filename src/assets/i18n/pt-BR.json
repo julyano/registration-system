@@ -49,7 +49,8 @@
         "placeholder": "Senha",
         "messages": {
           "error": {
-            "minlength": "Senha muito curta"
+            "minlength": "Senha muito curta",
+            "pattern": "Senha inválida"
           }
         }
       },
@@ -59,14 +60,25 @@
         "messages": {
           "error": {
             "minlength": "Senha muito curta",
+            "pattern": "Senha inválida",
             "custom": {
               "valuesDoNotMatch": "Senhas estão diferentes"
             }
           }
         }
       },
+      "toggle": {
+        "text": "Mostrar detalhes da senha"
+      },
       "button": {
         "label": "se inscrever"
+      },
+      "criterials": {
+        "LOWERCASE_CRITERIA_MSG" : "contém pelo menos 1 letra minúscula",
+        "UPPERCASE_CRITERIA_MSG" : "contém pelo menos 1 letra maiúscula",
+        "MIN_CHARS_CRITERIA_MSG" : "contém pelo menos {{value}} caracteres",
+        "SPECIAL_CHARS_CRITERIA_MSG" : "contém pelo menos 1 caractere especial",
+        "DIGITS_CRITERIA_MSG" : "contém pelo menos 1 dígito"
       }
     },
     "messages": {
