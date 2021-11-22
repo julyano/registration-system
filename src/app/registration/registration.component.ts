@@ -15,6 +15,7 @@ export class RegistrationComponent {
   public hidePassword = true;
   public hideConfirmPassword = true;
   public registrationForm: FormGroup;
+  public today =new Date();
 
   constructor(
     public formBuilder: FormBuilder,

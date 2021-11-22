@@ -44,7 +44,7 @@
       <div class="right-column">
         <mat-form-field appearance="outline">
           <mat-label>{{ 'form.registration.dateOfBirth.label' | translate }}</mat-label>
-          <input matInput readonly [matDatepicker]="picker" placeholder="{{ 'form.registration.dateOfBirth.placeholder' | translate }}" formControlName="datebirth"
+          <input matInput readonly [matDatepicker]="picker" [max]="today" placeholder="{{ 'form.registration.dateOfBirth.placeholder' | translate }}" formControlName="datebirth"
             (dateChange)="date($event)">
           <mat-error *ngIf="errorHandling('datebirth', 'required')">
             {{ 'form.messages.generic.error.required' | translate }}
