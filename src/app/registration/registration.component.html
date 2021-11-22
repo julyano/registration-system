@@ -94,6 +94,8 @@
 
       <button mat-flat-button color="primary" disabled={{registrationForm.invalid}}>{{ 'form.registration.button.label' | translate }}</button>
 
+      <span class="spacer"></span>
+      <re-captcha formControlName="recaptchaReactive"></re-captcha>
     </form>
   </mat-card>
 </div>

@@ -11,6 +11,11 @@ input:-internal-autofill-selected {
   color: -internal-light-dark(black, white) !important;
 }
 
+re-captcha.is-invalid > div {
+  border: 1px solid #dc3545 !important;
+  border-radius: 0.2rem;
+}
+
 * {
   box-sizing: border-box;
 }
