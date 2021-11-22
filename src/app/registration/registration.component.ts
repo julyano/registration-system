@@ -13,7 +13,6 @@ export class RegistrationComponent {
   public hidePassword = true;
   public hideConfirmPassword = true;
   public registrationForm: FormGroup;
-  token: string|undefined;
 
   constructor(
     public formBuilder: FormBuilder,
@@ -58,7 +57,6 @@ export class RegistrationComponent {
       ]]
     });
 
-    this.token = undefined;
    }
 
   public errorHandling = (control: string, error: string) => {
