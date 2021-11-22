@@ -14,6 +14,7 @@ import { NotificationService } from 'src/app/services/notification.service';
 export class RegistrationComponent {
   public hidePassword = true;
   public hideConfirmPassword = true;
+  public pattern = /^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@$!%*#?&])[A-Za-z\\d@$!%*#?&]{6,}$/;
   public registrationForm: FormGroup;
   public today =new Date();
 
@@ -47,10 +48,12 @@ export class RegistrationComponent {
       datebirth: ['', [Validators.required]],
       password: ['', [
         Validators.required,
+        Validators.pattern('^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@$!%*#?&])[A-Za-z\\d@$!%*#?&]{8,}$'),
         Validators.minLength(6)
       ]],
       confirmPassword: ['', [
         Validators.required,
+        Validators.pattern('^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@$!%*#?&])[A-Za-z\\d@$!%*#?&]{8,}$'),
         Validators.minLength(6),
         Validators.compose([
           this.controlValuesAreEqual('password', 'confirmPassword')
@@ -94,6 +97,9 @@ export class RegistrationComponent {
         onlyself: true,
       });
     }
+  }
+
+  public onStrengthChanged(event: any): void {
   }
 
   public async submitForm(): Promise<void> {

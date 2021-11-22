@@ -49,7 +49,8 @@
         "placeholder": "Password",
         "messages": {
           "error": {
-            "minlength": "Password too short"
+            "minlength": "Password too short",
+            "pattern": "Invalid password"
           }
         }
       },
@@ -59,14 +60,25 @@
         "messages": {
           "error": {
             "minlength": "Password too short",
+            "pattern": "Invalid password",
             "custom": {
               "valuesDoNotMatch": "Passwords are different"
             }
           }
         }
       },
+      "toggle": {
+        "text": "Show Password Details"
+      },
       "button": {
         "label": "subscribe"
+      },
+      "criterials": {
+        "LOWERCASE_CRITERIA_MSG" : "contains at least 1 lowercase letter",
+        "UPPERCASE_CRITERIA_MSG" : "contains at least 1 uppercase letter",
+        "MIN_CHARS_CRITERIA_MSG" : "contains at least {{value}} characters",
+        "SPECIAL_CHARS_CRITERIA_MSG" : "contains at least one special character",
+        "DIGITS_CRITERIA_MSG" : "contains at least one digit"
       }
     },
     "messages": {

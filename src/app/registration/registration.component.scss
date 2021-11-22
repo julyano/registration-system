@@ -5,6 +5,10 @@ mat-card {
   background-color: #e7e6fd;
 }
 
+mat-slide-toggle {
+  float: left;
+}
+
 input:-internal-autofill-selected {
   background-image: none !important;
   background-color: rgba(70, 90, 126, 0.4) !important;
