@@ -92,7 +92,7 @@
         </mat-error>
       </mat-form-field>
 
-      <button mat-flat-button color="primary" disabled={{registrationForm.invalid}}>{{ 'form.registration.button.label' | translate }}</button>
+      <button type="submit" mat-flat-button color="primary" [disabled]="registrationForm.invalid">{{ 'form.registration.button.label' | translate }}</button>
 
     </form>
   </mat-card>
