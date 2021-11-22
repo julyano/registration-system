@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   recaptcha: {
-    siteKey: '',
+    siteKey: '', // insira sua chave aqui
   }
 };
 
